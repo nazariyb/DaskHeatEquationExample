@@ -7,11 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-dask = "^2025.2.0"
+dask = {extras = ["distributed"], version = "^2025.2.0"}
 numpy = "^2.2.3"
 pysdl2 = "^0.9.17"
 panda3d = "^1.10.15"
 ursina = "^7.0.0"
+bokeh = "^3.6.3"
 
 
 [build-system]
