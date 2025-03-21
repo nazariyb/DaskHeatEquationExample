@@ -8,10 +8,11 @@ from dask.distributed import Client
 
 
 # Startup
-client = Client("tcp://192.168.0.162:8786")
+SCHEDULER_IP : str = "" # enter the IP of the scheduler here
+client = Client(SCHEDULER_IP)
 print(client)
 
-worker_to_remove = []
+worker_to_remove = [] # if needed
 client.retire_workers(workers=worker_to_remove, close_workers=True)
 
 app = Ursina(borderless=False, development_mode=True, fullscreen=False)
